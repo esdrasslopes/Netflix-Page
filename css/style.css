@@ -1,0 +1,387 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+nav {
+  position: relative;
+}
+.conteiner{
+  width: 100%;
+  height: 100vh;
+}
+.logo {
+  width: 200px;
+  position: relative;
+  left: 40px;
+  top: -60px;
+  z-index: 2;
+}
+
+.navbar-conteiner {
+  position: relative; /* Adiciona posicionamento relativo */
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com opacidade */
+  background-image: url(../img/2f88a9427474343f7275e3b8f6fcc2e1.jpg); /* Imagem de fundo */
+  background-size: cover; /* Garante que a imagem cubra todo o contêiner */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  height: 900px;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.navbar-conteiner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de opacidade */
+  z-index: 1;
+  pointer-events: none; /* Permite que elementos dentro do contêiner ainda sejam clicáveis */
+}
+
+.navbar-items {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  margin: 0;
+  height: 80px;
+  line-height: 80px;
+  z-index: 2;
+}
+.navbar-items li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.navbar-items select {
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 7px 20px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.navbar-items a {
+  color: #fff;
+  background-color: red;
+  text-decoration: none;
+  transition: 0.5s;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.navbar-items a:hover {
+  background-color: rgb(199, 14, 14);
+}
+
+.input-conteiner {
+  position: absolute; /* Permite posicionar o elemento acima dos outros */
+  top: 40%; /* Centraliza verticalmente dentro do contêiner pai */
+  left: 50%; /* Centraliza horizontalmente dentro do contêiner pai */
+  transform: translate(-50%, -50%); /* Ajusta a posição para centralizar exatamente */
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  z-index: 3; /* Deve ser maior que o z-index da imagem e do fundo */
+}
+
+.input-conteiner h1 {
+  margin-bottom: 15px;
+  font-size: 40px;
+}
+
+.input-conteiner p {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.input-conteiner input[type="email"] {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 400px;
+  padding: 17px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none; /* Adiciona para remover a borda */
+  margin-left: 5px;
+  border: 1px solid gray;
+  font-weight: bold;
+}
+.input-conteiner input[type="email"]:hover{
+  border: 2px solid white;
+}
+
+.input-conteiner input[type="button"] {
+  color: #fff;
+  background-color: red;
+  padding: 18px 20px;
+  border-radius: 5px;
+  border: none; /* Remove a borda */
+  font-size: 16px;
+  width: 150px;
+  cursor: pointer; 
+  transition: 0.5s;/* Adiciona o cursor pointer */
+  font-weight: bold;
+}
+
+.input-conteiner input[type="button"]:hover {
+  background-color: rgb(199, 14, 14); /* Adiciona uma cor de hover */
+}
+
+.conteiner-watch{
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  border-bottom: 5px solid gray;
+}
+
+.tv{
+  width: 50%;
+  margin-left: 10px;
+  margin-top: 100px;
+  padding: 10px;
+
+}
+.tv h3{
+  color: #fff;
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 3rem;
+
+}
+
+.tv p{
+  color: #fff;
+  text-align: left;
+  font-size: 1.5rem;
+  
+}
+.imagem{
+  background-image: url(../img/tv.png);
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  margin: 0 auto;
+  height: 400px;
+  margin-bottom: 30px;
+}
+
+.conteiner-where{
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  border-bottom: 5px solid gray;
+}
+
+.where{
+  width: 50%;
+  margin-left: 10px;
+  margin-top: 100px;
+  padding: 10px;
+
+}
+.where h3{
+  color: #fff;
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 3rem;
+
+}
+
+.where p{
+  color: #fff;
+  text-align: left;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  
+}
+.image{
+  background-image: url(../img/device-pile.png);
+  background-position: center;
+  background-size: cover;
+  width: 45%;
+  margin: 0 auto;
+  height: 400px;
+}
+
+.conteiner-profile{
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  border-bottom: 5px solid gray;
+}
+
+.profile{
+  width: 50%;
+  margin-left: 10px;
+  margin-top: 100px;
+  padding: 10px;
+}
+.profile h3{
+  color: #fff;
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+
+.profile p{
+  color: #fff;
+  text-align: left;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  
+}
+.kids{
+  background-image: url(../img/AAAABUIQf-EOyyk3NFohgiSUVv5tl73COXhof_N8Gz2GD6IqJ0Cz-DzUfRzj2NhSocLHDrNUlFL3NK2fDG6MCKzVHt3kCmSOjrf4SuVb.png);
+  background-position: center;
+  background-size: cover;
+  width: 45%;
+  margin: 0 auto;
+  height: 400px;
+}
+
+.conteiner-download{
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  border-bottom: 5px solid gray;
+
+}
+
+.download{
+  width: 50%;
+  margin-left: 10px;
+  margin-top: 100px;
+  padding: 10px;
+
+}
+.download h3{
+  color: #fff;
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+
+.download p{
+  color: #fff;
+  text-align: left;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  
+}
+.download-img{
+  background-image: url(../img/mobile-0819.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 45%;
+  margin: 0 auto;
+  height: 400px;
+}
+
+@media(max-width:950px){
+  .conteiner-watch,
+  .conteiner-profile,
+  .conteiner-download,
+  .conteiner-where{
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile h3,
+  .download h3,
+  .where h3,
+  .tv h3{
+    text-align: center;
+    margin-left: 0;
+    font-size: 2rem;
+  }
+
+  .profile p,
+  .download p,
+  .where p,
+  .tv p{
+    text-align: center;
+    margin-left: 0;
+    font-size: 1.125rem;
+  }
+
+  .image{
+    width: 50%;
+  }
+}
+
+@media(max-width:900px){
+  .image{
+    width: 60%;
+  }
+}
+
+@media(max-width:800px){
+  .kids{
+    width: 66%;
+  }
+}
+
+@media(max-width:700px){
+  .input-conteiner h1 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+  }
+  
+  .input-conteiner p {
+    margin-bottom: 15px;
+    font-size: 1.125rem;
+  }
+
+  .imagem{
+    width: 100%;
+  }
+
+  .image{
+    width: 85%;
+  }
+
+  .kids{
+    width: 85%;
+  }
+}
+
+@media(max-width:600px){
+  .kids{
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media(max-width:576px){
+  .logo{
+    width: 100px;
+    margin-top: 50px;
+    position: relative;
+    left: 0;
+  }
+
+  .input-conteiner input[type="email"]{
+    display: block;
+    width: 500px;
+    margin: 15px auto;
+  }
+  .navbar-items select {
+    padding: 7px 8px;
+    font-size: 14px;
+  }
+  .navbar-items a {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
