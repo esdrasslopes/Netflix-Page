@@ -332,26 +332,26 @@ nav {
   }
 }
 
-@media(max-width:700px){
+@media (max-width: 768px) {
   .input-conteiner h1 {
     margin-bottom: 15px;
     font-size: 2rem;
   }
-  
+
   .input-conteiner p {
     margin-bottom: 15px;
     font-size: 1.125rem;
   }
 
-  .imagem{
+  .imagem {
     width: 100%;
   }
 
-  .image{
+  .image {
     width: 85%;
   }
 
-  .kids{
+  .kids {
     width: 85%;
   }
 }
@@ -373,7 +373,7 @@ nav {
 
   .input-conteiner input[type="email"]{
     display: block;
-    width: 500px;
+    width: 350px;
     margin: 15px auto;
   }
   .navbar-items select {
@@ -383,5 +383,13 @@ nav {
   .navbar-items a {
     padding: 10px 15px;
     font-size: 14px;
+  }
+
+  .imagem,
+  .image,
+  .download-img,
+  .kids{
+    width: 100%;
+    object-fit: cover;
   }
 }
